@@ -1,6 +1,6 @@
 # Taghvim data
 
-This repository contains the holidays and events for the Taghvim browser extension. The extension reads the files directly from GitHub. When you push a change to the `main` branch, users see it in a maximum of six hours, or immediately when they click the refresh button.
+This repository contains the holidays, the Hijri corrections, and the daily photos for the Taghvim browser extension. Each build of the extension contains a copy of this repository, so the page shows it immediately and offline. After the page shows, it checks GitHub for changes (at most once in 10 minutes). When you push a change to the `main` branch, users see it on their next new tab after that check, or immediately when they click the ⟳ button.
 
 ## Files
 
@@ -42,7 +42,9 @@ This repository contains the holidays and events for the Taghvim browser extensi
 
 ## Daily backgrounds
 
-The new tab page shows one photo from `backgrounds.json` each day. All users see the same photo on the same day. The page keeps each downloaded photo on the computer, and it also downloads the photos of the next 3 days. Thus the page works offline.
+The new tab page shows one photo from `backgrounds.json` each day. All users see the same photo on the same day. The photos in the build show immediately. The page downloads a photo that you add after the build, keeps it on the computer, and also downloads such photos for the next 3 days.
+
+IMPORTANT: To change a photo or an event image, give the new file a new name. The extension uses the copy in its build for a known file name.
 
 ```json
 {
