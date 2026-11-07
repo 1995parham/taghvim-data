@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Taghvim events file",
+  "type": "object",
+  "required": ["events"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "year": { "type": "integer", "description": "Jalali year. Required in years/<year>.json." },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title"],
+        "oneOf": [{ "required": ["jalali"] }, { "required": ["gregorian"] }],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "jalali": {
+            "type": "string",
+            "description": "MM-DD in recurring.json, YYYY-MM-DD in a year file.",
+            "pattern": "^(\\d{4}-)?\\d{2}-\\d{2}$"
+          },
+          "gregorian": {
+            "type": "string",
+            "description": "MM-DD in recurring.json, YYYY-MM-DD in a year file.",
+            "pattern": "^(\\d{4}-)?\\d{2}-\\d{2}$"
+          },
+          "holiday": { "type": "boolean", "default": false },
+          "title": { "$ref": "#/$defs/text" },
+          "description": { "$ref": "#/$defs/text" },
+          "image": { "type": "string", "description": "Repo-relative path (images/x.jpg) or an https URL." }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "text": {
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "object",
+          "properties": { "fa": { "type": "string" }, "en": { "type": "string" } },
+          "minProperties": 1,
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}
