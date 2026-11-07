@@ -133,6 +133,25 @@
       },
       "credit": "Photo: Diego Delso · CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Pers%C3%A9polis,_Ir%C3%A1n,_2016-09-24,_DD_15.jpg"
+    },
+    {
+      "id": "roudehen-first-anniversary",
+      "image": "backgrounds/roudehen-first-anniversary.webp",
+      "position": "center 35%",
+      "place": {
+        "fa": "جشن یکسالگی پرهام و الهه",
+        "en": "Parham & Elaheh's first anniversary"
+      },
+      "region": {
+        "fa": "مهرآباد، رودهن، استان تهران، ایران",
+        "en": "Mehrabad, Roudehen, Tehran Province, Iran"
+      },
+      "description": {
+        "fa": "الهه در جشن یکسالگی ازدواجمان، پنجشنبه ۲۲ خرداد ۱۴۰۴، در فولکس قورباغه‌ای صورتی که با گل آراسته شده بود.",
+        "en": "Elaheh at our first wedding anniversary party on Thursday, 12 June 2025, in a pink VW Beetle decorated with flowers."
+      },
+      "credit": "Photo: Parham & Elaheh's collection · Unlicense",
+      "source": "https://github.com/parham-alvani/browser-wallpapers/blob/main/chrome/elahe.jpg"
     }
   ]
 }
