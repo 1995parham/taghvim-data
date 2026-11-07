@@ -1,5 +1,7 @@
 # Taghvim data
 
+To change the data, see [CONTRIBUTING.md](CONTRIBUTING.md). Each change on `main` makes a new release of the extension automatically.
+
 This repository contains the holidays, the Hijri corrections, and the daily photos for the Taghvim browser extension. Each build of the extension contains a copy of this repository, so the page shows it immediately and offline. After the page shows, it checks GitHub for changes (at most once in 10 minutes). When you push a change to the `main` branch, users see it on their next new tab after that check, or immediately when they click the ⟳ button.
 
 ## Files
@@ -12,7 +14,7 @@ This repository contains the holidays, the Hijri corrections, and the daily phot
 | `backgrounds/` | The background photos. Use landscape photos of approximately 2560 px width and less than 1.5 MB. |
 | `hijri.json` | Corrections for the Hijri (lunar) date. |
 | `images/` | Images for the events. Square images of approximately 256×256 pixels are best. SVG, PNG, JPEG, and WebP are all good. |
-| `schema.json` | The JSON schema of the event files. |
+| `schema.json`, `backgrounds.schema.json`, `hijri.schema.json` | JSON schemas. Editors such as VS Code use them to check the files. |
 
 ## Event format
 
@@ -38,7 +40,7 @@ This repository contains the holidays, the Hijri corrections, and the daily phot
 1. Get the official dates from the calendar of the University of Tehran Geophysics Institute (calendar.ut.ac.ir).
 2. Create `years/<year>.json` with `"year": <year>` and one event for each holiday.
 3. Run `node scripts/validate.mjs`.
-4. Push the change. The `validate` GitHub Action runs the same check.
+4. Push the change, or open a pull request. The `validate` GitHub Action runs the same check.
 
 ## Daily backgrounds
 
@@ -80,3 +82,11 @@ The extension calculates the Hijri date offline with the Umm al-Qura calendar. T
 
 - `months`: the official first day of each Hijri month, as a Gregorian date. Add each month in sequence when the official calendar announces it. A listed month applies to the 30 days from its start.
 - `adjust`: the number of days to add to the Umm al-Qura date, for dates that no listed month covers. For example, `-1` makes the date one day earlier.
+
+## Releases
+
+Each push to `main` that passes the `validate` check makes a new release of the extension, with the code of the latest extension release and the new data. The release version adds a fourth number to the extension version, for example `1.4.0.12`.
+
+- With the secret `TAGHVIM_RELEASE_TOKEN`, the release starts immediately. It is a fine-grained personal access token with "Contents: Read and write" on the extension repository.
+- Without the secret, the extension repository finds the change at its daily check (03:17 UTC).
+- For a fork, set the repository variable `EXTENSION_REPOSITORY` to `owner/repo` of the extension.
