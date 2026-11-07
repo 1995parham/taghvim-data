@@ -11,7 +11,7 @@ This repository contains the holidays, the Hijri corrections, and the daily phot
 | `recurring.json` | Events that occur on the same day each year, in the Jalali or the Gregorian calendar. |
 | `years/<jalali year>.json` | Events for one Jalali year only. Put lunar (Hijri) holidays here, because their Jalali date changes each year. |
 | `backgrounds.json` | The list of daily background photos of the new tab page, with the location and the credit of each photo. |
-| `backgrounds/` | The background photos. Use landscape photos of approximately 2560 px width and less than 1.5 MB. |
+| `backgrounds/` | The background photos: WebP, landscape, approximately 2560 px width and 400 KB. |
 | `hijri.json` | Corrections for the Hijri (lunar) date. |
 | `images/` | Images for the events. Square images of approximately 256×256 pixels are best. SVG, PNG, JPEG, and WebP are all good. |
 | `schema.json`, `backgrounds.schema.json`, `hijri.schema.json` | JSON schemas. Editors such as VS Code use them to check the files. |
@@ -51,20 +51,25 @@ IMPORTANT: To change a photo or an event image, give the new file a new name. Th
 ```json
 {
   "id": "isfahan-si-o-se-pol",
-  "image": "backgrounds/isfahan-si-o-se-pol.jpg",
+  "image": "backgrounds/isfahan-si-o-se-pol.webp",
   "position": "center",
   "place": { "fa": "سی‌وسه‌پل", "en": "Si-o-se-pol" },
   "region": { "fa": "اصفهان، ایران", "en": "Isfahan, Iran" },
+  "description": {
+    "fa": "طاق‌های روشن سی‌وسه‌پل در شب و بازتاب آن‌ها در آب زاینده‌رود.",
+    "en": "The lit arches of the Si-o-se-pol bridge at night, reflected in the Zayanderud river."
+  },
   "credit": "Photo: Reza Haji-pour · CC BY 3.0",
   "source": "https://commons.wikimedia.org/wiki/File:Si-o-se-Pol.jpg"
 }
 ```
 
 - `place` and `region`: the page writes them over the photo, in the bottom-right corner.
+- `description`: optional. One or two lines about the photo (a maximum of 160 characters). The page writes it under the location.
 - `position`: the CSS `object-position` of the photo. Use it to keep the important part visible on wide screens, for example `center 40%`.
 - `credit` and `source`: required. All current photos come from Wikimedia Commons, and their licenses (CC BY and CC BY-SA) require the name of the photographer and the license.
 
-To add a photo, resize it to 2560 px width (`sips -Z 2560 -s format jpeg -s formatOptions 60 in.jpg --out backgrounds/name.jpg`), add an entry to `backgrounds.json`, and run `node scripts/validate.mjs`.
+To add a photo, convert it to WebP with 2560 px width and approximately 400 KB, add an entry to `backgrounds.json`, and run `node scripts/validate.mjs`. With [cwebp](https://developers.google.com/speed/webp/docs/cwebp): `cwebp -size 400000 -pass 6 -m 6 -resize 2560 0 -metadata none in.jpg -o backgrounds/name.webp`. The `-metadata none` option removes the camera data (such as GPS) from the file.
 
 ## Hijri date
 

@@ -32,7 +32,7 @@ When the pull request is merged, the extension repository makes a new release wi
 - Keep each description to one or two lines (a maximum of 160 characters).
 - For lunar holidays, use the official dates of the University of Tehran Geophysics Institute (calendar.ut.ac.ir).
 - Use only photos that you may share, with a free license such as CC BY or CC BY-SA. Put the photographer and the license in `credit`, and the page of the photo in `source`.
-- Resize photos to approximately 2560 px width and less than 1.5 MB. For example, on macOS: `sips -Z 2560 -s format jpeg -s formatOptions 60 in.jpg --out backgrounds/name.jpg`.
+- Convert photos to WebP with approximately 2560 px width and 400 KB, and remove the camera data: `cwebp -size 400000 -pass 6 -m 6 -resize 2560 0 -metadata none in.jpg -o backgrounds/name.webp`. The `validate` check warns when a photo is larger than 600 KB.
 - To change a photo or an image, give the new file a new name. Released extensions keep their own copy of each known file name.
 
 ## Check on your computer
