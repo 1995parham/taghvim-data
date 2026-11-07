@@ -1,7 +1,12 @@
 name: validate
+
 on:
   push:
   pull_request:
+
+permissions:
+  contents: read
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -11,3 +16,26 @@ jobs:
         with:
           node-version: 22
       - run: node scripts/validate.mjs
+
+  # After a change on main, ask the extension repository to make a release with the new data.
+  # It needs the secret TAGHVIM_RELEASE_TOKEN: a fine-grained token with
+  # "Contents: Read and write" on the extension repository. Without it, the extension
+  # repository still finds the change with its daily check.
+  release:
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    env:
+      TOKEN: ${{ secrets.TAGHVIM_RELEASE_TOKEN }}
+      EXTENSION_REPOSITORY: ${{ vars.EXTENSION_REPOSITORY || '1995parham/taghvim' }}
+    steps:
+      - name: Start a data release
+        if: env.TOKEN != ''
+        env:
+          GH_TOKEN: ${{ env.TOKEN }}
+        run: |
+          gh api "repos/${EXTENSION_REPOSITORY}/dispatches" -f event_type=data-updated
+          echo "Asked ${EXTENSION_REPOSITORY} to make a release."
+      - name: No token
+        if: env.TOKEN == ''
+        run: echo "::notice::No TAGHVIM_RELEASE_TOKEN. The extension repository makes the release at its next daily check."
