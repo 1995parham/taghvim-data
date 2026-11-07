@@ -41,6 +41,10 @@
           "region": {
             "$ref": "#/$defs/text"
           },
+          "description": {
+            "$ref": "#/$defs/text",
+            "description": "One or two lines about the photo (a maximum of 160 characters)."
+          },
           "credit": {
             "type": "string",
             "description": "Photographer and license, for example \"Photo: Enric · CC BY-SA 4.0\"."

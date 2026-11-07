@@ -13,6 +13,10 @@
         "fa": "بادالونا، کاتالونیا، اسپانیا",
         "en": "Badalona, Catalonia, Spain"
       },
+      "description": {
+        "fa": "غروب ساحل استاسیون بادالونا؛ اسکله‌ی قدیمی بارگیری نفت امروز گذرگاهی برای قدم زدن روی دریاست.",
+        "en": "Sunset at Platja de l'Estació. The old oil-loading pier is now a walkway over the sea."
+      },
       "credit": "Photo: Enric · CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:01_Platja_de_l%27Estaci%C3%B3_al_capvespre_(Badalona),_al_fons_el_pont_del_Petroli.jpg"
     },
@@ -27,6 +31,10 @@
       "region": {
         "fa": "اصفهان، ایران",
         "en": "Isfahan, Iran"
+      },
+      "description": {
+        "fa": "میدان نقش جهان از زیر طاق مقرنس سردر قیصریه، با مسجد امام در انتهای میدان.",
+        "en": "Naqsh-e Jahan Square through the muqarnas arch of the Qeysarieh Gate, with the Shah Mosque at the far end."
       },
       "credit": "Photo: Amir Pashaei · CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Naqsh-e_Jahan_Square_from_the_gheisariye_Vault.jpg"
@@ -43,6 +51,10 @@
         "fa": "یزد، ایران",
         "en": "Yazd, Iran"
       },
+      "description": {
+        "fa": "گنبد کاشی‌کاری بقعه‌ی سید رکن‌الدین و مناره‌های مسجد جامع یزد در نور عصر.",
+        "en": "The tiled dome of the Rokn al-Din Mausoleum and the minarets of the Jameh Mosque in the late-afternoon light."
+      },
       "credit": "Photo: Ggia · CC BY-SA 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:20110103_Jame-e_Kabir_and_Roknedin_Mauseleum_Yazd_Iran.jpg"
     },
@@ -57,6 +69,10 @@
       "region": {
         "fa": "بادالونا، کاتالونیا، اسپانیا",
         "en": "Badalona, Catalonia, Spain"
+      },
+      "description": {
+        "fa": "خورشید از پشت ابرها بر اسکله‌ی پونت دل پترولی و موج‌های دریای مدیترانه می‌تابد.",
+        "en": "The sun breaks through the clouds over the Pont del Petroli and the waves of the Mediterranean."
       },
       "credit": "Photo: Carquinyol · CC BY-SA 2.0",
       "source": "https://commons.wikimedia.org/wiki/File:N%C3%BAvols,_mar_i_pont_(32212714692).jpg"
@@ -73,6 +89,10 @@
         "fa": "اصفهان، ایران",
         "en": "Isfahan, Iran"
       },
+      "description": {
+        "fa": "طاق‌های روشن سی‌وسه‌پل در شب و بازتاب آن‌ها در آب زاینده‌رود.",
+        "en": "The lit arches of the Si-o-se-pol bridge at night, reflected in the Zayanderud river."
+      },
       "credit": "Photo: Reza Haji-pour · CC BY 3.0",
       "source": "https://commons.wikimedia.org/wiki/File:Si-o-se-Pol.jpg"
     },
@@ -88,6 +108,10 @@
         "fa": "کاشان، ایران",
         "en": "Kashan, Iran"
       },
+      "description": {
+        "fa": "تالار اصلی خانه‌ی بروجردی‌ها، خانه‌ای تاریخی از دوره‌ی قاجار با گچ‌بری و نقاشی‌های دیواری.",
+        "en": "The main hall of the Borujerdi House, a Qajar-era house with stucco work and wall paintings."
+      },
       "credit": "Photo: Amir Pashaei · CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Borujerdi_House_Kashan_Iran.jpg"
     },
@@ -102,6 +126,10 @@
       "region": {
         "fa": "مرودشت، فارس، ایران",
         "en": "Marvdasht, Fars, Iran"
+      },
+      "description": {
+        "fa": "نقش برجسته‌ی سربازان هخامنشی بر دیوارهای تخت جمشید.",
+        "en": "A relief of Achaemenid guards on a wall at Persepolis."
       },
       "credit": "Photo: Diego Delso · CC BY-SA 4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Pers%C3%A9polis,_Ir%C3%A1n,_2016-09-24,_DD_15.jpg"

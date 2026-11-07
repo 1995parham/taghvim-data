@@ -114,6 +114,7 @@ function checkBackgrounds() {
       else if (statSync(path).size > 600 * 1024) warnings.push(`${rel} ${id}: image is larger than 600 KB (see CONTRIBUTING.md)`);
     }
     for (const f of ['place', 'region']) checkText(rel, { ...b, id }, f, true);
+    checkText(rel, { ...b, id }, 'description', false);
     if (!b.credit) errors.push(`${rel} ${id}: missing credit (photo licenses require it)`);
   }
   console.log(`✓ ${rel}: ${data.backgrounds.length} backgrounds`);
