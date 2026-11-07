@@ -37,6 +37,8 @@ This repository contains the holidays, the Hijri corrections, and the daily phot
 
 ## Add the lunar holidays of a year
 
+The lunar holidays of a year are in the official calendar, which time.ir also shows. The dates of the calendar are a forecast: the moon-sighting committee (ستاد استهلال) announces the real first day of each Hijri month, and it can be one day later. When an announcement is different from the calendar, change the dates of that month in `years/<year>.json` and the `start` of that month in `hijri.json`. In 1405, the announced months up to Rabi al-Thani 1448 were the same as the calendar; the months from Jumada al-Thani 1448 are still a forecast.
+
 1. Get the official dates from the calendar of the University of Tehran Geophysics Institute (calendar.ut.ac.ir).
 2. Create `years/<year>.json` with `"year": <year>` and one event for each holiday.
 3. Run `node scripts/validate.mjs`.
