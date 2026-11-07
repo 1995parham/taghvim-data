@@ -2,23 +2,53 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Taghvim daily background photos",
   "type": "object",
-  "required": ["backgrounds"],
+  "required": [
+    "backgrounds"
+  ],
   "properties": {
-    "$schema": { "type": "string" },
+    "$schema": {
+      "type": "string"
+    },
     "backgrounds": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["id", "image", "place", "region", "credit", "source"],
+        "required": [
+          "id",
+          "image",
+          "place",
+          "region",
+          "credit",
+          "source"
+        ],
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
-          "image": { "type": "string", "description": "backgrounds/<name>.jpg or an https URL." },
-          "position": { "type": "string", "description": "CSS object-position, for example \"center 40%\"." },
-          "place": { "$ref": "#/$defs/text" },
-          "region": { "$ref": "#/$defs/text" },
-          "credit": { "type": "string", "description": "Photographer and license, for example \"Photo: Enric · CC BY-SA 4.0\"." },
-          "source": { "type": "string", "pattern": "^https://" }
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "image": {
+            "type": "string",
+            "description": "backgrounds/<name>.webp or an https URL."
+          },
+          "position": {
+            "type": "string",
+            "description": "CSS object-position, for example \"center 40%\"."
+          },
+          "place": {
+            "$ref": "#/$defs/text"
+          },
+          "region": {
+            "$ref": "#/$defs/text"
+          },
+          "credit": {
+            "type": "string",
+            "description": "Photographer and license, for example \"Photo: Enric · CC BY-SA 4.0\"."
+          },
+          "source": {
+            "type": "string",
+            "pattern": "^https://"
+          }
         },
         "additionalProperties": false
       }
@@ -27,8 +57,18 @@
   "$defs": {
     "text": {
       "type": "object",
-      "properties": { "fa": { "type": "string" }, "en": { "type": "string" } },
-      "required": ["fa", "en"],
+      "properties": {
+        "fa": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "fa",
+        "en"
+      ],
       "additionalProperties": false
     }
   }

@@ -3,7 +3,7 @@
   "backgrounds": [
     {
       "id": "badalona-pont-del-petroli-sunset",
-      "image": "backgrounds/badalona-pont-del-petroli-sunset.jpg",
+      "image": "backgrounds/badalona-pont-del-petroli-sunset.webp",
       "position": "center 40%",
       "place": {
         "fa": "پونت دل پترولی (اسکله نفت)",
@@ -18,7 +18,7 @@
     },
     {
       "id": "isfahan-naqsh-e-jahan",
-      "image": "backgrounds/isfahan-naqsh-e-jahan.jpg",
+      "image": "backgrounds/isfahan-naqsh-e-jahan.webp",
       "position": "center 45%",
       "place": {
         "fa": "میدان نقش جهان، از طاق سردر قیصریه",
@@ -33,7 +33,7 @@
     },
     {
       "id": "yazd-jameh-mosque",
-      "image": "backgrounds/yazd-jameh-mosque.jpg",
+      "image": "backgrounds/yazd-jameh-mosque.webp",
       "position": "center 35%",
       "place": {
         "fa": "مسجد جامع یزد و بقعه سید رکن‌الدین",
@@ -48,7 +48,7 @@
     },
     {
       "id": "badalona-pont-del-petroli-clouds",
-      "image": "backgrounds/badalona-pont-del-petroli-clouds.jpg",
+      "image": "backgrounds/badalona-pont-del-petroli-clouds.webp",
       "position": "center 45%",
       "place": {
         "fa": "پونت دل پترولی (اسکله نفت)",
@@ -63,7 +63,7 @@
     },
     {
       "id": "isfahan-si-o-se-pol",
-      "image": "backgrounds/isfahan-si-o-se-pol.jpg",
+      "image": "backgrounds/isfahan-si-o-se-pol.webp",
       "position": "center",
       "place": {
         "fa": "سی‌وسه‌پل",
@@ -78,7 +78,7 @@
     },
     {
       "id": "kashan-borujerdi-house",
-      "image": "backgrounds/kashan-borujerdi-house.jpg",
+      "image": "backgrounds/kashan-borujerdi-house.webp",
       "position": "center",
       "place": {
         "fa": "خانه بروجردی‌ها",
@@ -93,7 +93,7 @@
     },
     {
       "id": "persepolis",
-      "image": "backgrounds/persepolis.jpg",
+      "image": "backgrounds/persepolis.webp",
       "position": "center",
       "place": {
         "fa": "تخت جمشید",

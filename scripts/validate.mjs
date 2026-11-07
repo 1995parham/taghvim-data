@@ -111,7 +111,7 @@ function checkBackgrounds() {
     else if (!/^https:\/\//.test(b.image)) {
       const path = join(root, b.image);
       if (!existsSync(path)) errors.push(`${rel} ${id}: image not found: ${b.image}`);
-      else if (statSync(path).size > 1.5 * 1024 * 1024) warnings.push(`${rel} ${id}: image is larger than 1.5 MB`);
+      else if (statSync(path).size > 600 * 1024) warnings.push(`${rel} ${id}: image is larger than 600 KB (see CONTRIBUTING.md)`);
     }
     for (const f of ['place', 'region']) checkText(rel, { ...b, id }, f, true);
     if (!b.credit) errors.push(`${rel} ${id}: missing credit (photo licenses require it)`);
